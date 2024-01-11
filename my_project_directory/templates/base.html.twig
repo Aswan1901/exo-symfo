@@ -22,6 +22,17 @@
                 <h1 class="text-center mb-4">Bienvenue sur la page d'accueil</h1>
 
                 <!-- Affichage des produits -->
+                <ul>
+                {% for product in products %}
+                
+                <li> Nom : {{ product.name|e }}</li>
+                <li>Prix : {{ product.price|e }}</li>
+                <li>Quantité :{{ product.quantity|e }}</li>
+                <li>Description :{{ product.description|e }}</li>
+             
+                {% endfor %}
+                {{ dump(products)}}
+                </ul>
 
                 <!-- Bouton vers le formulaire d'ajout de produit -->
                 <div class="text-center mt-4">

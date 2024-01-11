@@ -12,10 +12,14 @@ class HomepageController extends AbstractController
     #[Route('/', name: 'app_homepage')]
     public function index(ProductRepository $productRepository): Response
     {
-        var_dump($productRepository->findAll());
+        // var_dump($productRepository->findAll());
+        $products = $productRepository->findAll();
+      
 
         return $this->render('base.html.twig', [
             'controller_name' => 'HomepageController',
+            'products' => $products
+
             
         ]);
     }
