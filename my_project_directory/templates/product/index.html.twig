@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card shadow-lg" style="width: 30rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Ajouter un Nouveau Produit</h1>
+            {{ form_start(formProduct) }}
+            {{ form_row(formProduct.name) }}
+            {{ form_row(formProduct.price) }}
+            {{ form_row(formProduct.quantity) }}
+            {{ form_row(formProduct.description) }}
+            <button  type="submit" class="btn btn-success">  Ajouter un produit</button>
+            {{ form_end(formProduct) }}
+       </div>
+    </div>
+</div>
+{% endblock %}
